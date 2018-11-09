@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/img_app"
+        android:layout_width="256dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="@dimen/dp_56"
+        android:background="@drawable/ic_app"
+        app:layout_constraintBottom_toTopOf="@id/content_edittext"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/content_edittext"
+        app:layout_constraintTop_toBottomOf="@id/img_app"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        >
+        <EditText
+            android:id="@+id/edit_username"
+            android:hint="Email"
+            android:inputType="text"
+            android:layout_width="256dp"
+            android:layout_height="38dp"
+            android:background="@drawable/custom_edittext"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:drawableLeft="@drawable/ic_account_circle_black_24dp"
+
+            />
+        <EditText
+            android:hint="Password"
+            android:id="@+id/edit_password"
+            android:layout_width="256dp"
+            android:layout_height="38dp"
+            android:background="@drawable/custom_edittext"
+            app:layout_constraintTop_toBottomOf="@id/edit_username"
+            android:layout_marginTop="40dp"
+            android:drawableLeft="@drawable/ic_vpn_key_black_24dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+    </android.support.constraint.ConstraintLayout>
+           <Button
+               android:layout_marginTop="@dimen/dp_40"
+               app:layout_constraintLeft_toLeftOf="parent"
+               app:layout_constraintRight_toRightOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/content_edittext"
+               android:layout_width="250dp"
+               android:background="@drawable/custom_button"
+               android:text="Lognin"
+               android:id="@+id/btn_signin"
+               android:backgroundTint="@color/colorButtonChat"
+               android:layout_height="wrap_content" />
+    <android.support.constraint.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_marginTop="128dp"
+        android:id="@+id/content_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/content_edittext"
+
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:text="@string/signup"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="16sp"
+            android:gravity="center"
+            />
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>
